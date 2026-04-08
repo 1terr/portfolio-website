@@ -12,27 +12,43 @@ export default function Hero() {
   return (
     <section
       id="hero"
+      className="px-6 md:px-16"
       style={{
         minHeight: "90vh",
         display: "flex",
         alignItems: "center",
-        padding: "0 4rem",
         position: "relative",
         maxWidth: "1200px",
         margin: "0 auto",
+        paddingTop: "3rem",
+        paddingBottom: "3rem",
       }}
-      className="px-6 md:px-16"
     >
       <div
-        style={{
-          display: "grid",
-          gridTemplateColumns: "1fr 1fr",
-          gap: "4rem",
-          alignItems: "center",
-          width: "100%",
-        }}
-        className="grid-cols-1 md:grid-cols-2"
+        className="grid grid-cols-1 md:grid-cols-2"
+        style={{ gap: "3rem", alignItems: "center", width: "100%" }}
       >
+        {/* Photo — shows on mobile above text */}
+        <motion.div
+          className="flex md:hidden justify-center"
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+        >
+          <img
+            src="/avatar.jpg"
+            alt="Tereraishe Mahupa"
+            style={{
+              width: "160px",
+              height: "160px",
+              borderRadius: "50%",
+              border: "2px solid var(--border)",
+              objectFit: "cover",
+              objectPosition: "top",
+            }}
+          />
+        </motion.div>
+
         {/* Left: Text */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -210,16 +226,15 @@ export default function Hero() {
           </div>
         </motion.div>
 
-        {/* Right: Avatar */}
+        {/* Right: Avatar — desktop only */}
         <motion.div
-          className="flex"
+          className="hidden md:flex"
           style={{ justifyContent: "center", alignItems: "center" }}
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
         >
           <div style={{ position: "relative", width: "280px", height: "280px" }}>
-            {/* Orbit rings */}
             <div
               className="spin-slow"
               style={{
@@ -251,22 +266,18 @@ export default function Hero() {
                 border: "1px solid rgba(79,209,197,0.1)",
               }}
             />
-            {/* Avatar circle */}
-            {/* Avatar circle */}
-<img
-  src="/avatar.jpg"
-  alt="Tereraishe Mahupa"
-  style={{
-    width: "280px",
-    height: "280px",
-    borderRadius: "50%",
-    border: "2px solid var(--border)",
-    objectFit: "cover",
-    objectPosition: "top",
-  }}
-/>
-
-            
+            <img
+              src="/avatar.jpg"
+              alt="Tereraishe Mahupa"
+              style={{
+                width: "280px",
+                height: "280px",
+                borderRadius: "50%",
+                border: "2px solid var(--border)",
+                objectFit: "cover",
+                objectPosition: "top",
+              }}
+            />
           </div>
         </motion.div>
       </div>
