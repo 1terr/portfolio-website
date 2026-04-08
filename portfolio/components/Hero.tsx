@@ -212,7 +212,7 @@ export default function Hero() {
 
         {/* Right: Avatar */}
         <motion.div
-          className="hidden md:flex"
+          className="flex"
           style={{ justifyContent: "center", alignItems: "center" }}
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
@@ -252,25 +252,21 @@ export default function Hero() {
               }}
             />
             {/* Avatar circle */}
-            <div
-              style={{
-                width: "280px",
-                height: "280px",
-                borderRadius: "50%",
-                background: "linear-gradient(135deg, #1a2235, #2d3a55)",
-                border: "2px solid var(--border)",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                fontFamily: "'Sora', sans-serif",
-                fontSize: "5rem",
-                fontWeight: 700,
-                color: "var(--teal)",
-                letterSpacing: "-0.04em",
-              }}
-            >
-              TM
-            </div>
+            {/* Avatar circle */}
+<img
+  src="/avatar.jpg"
+  alt="Tereraishe Mahupa"
+  style={{
+    width: "280px",
+    height: "280px",
+    borderRadius: "50%",
+    border: "2px solid var(--border)",
+    objectFit: "cover",
+    objectPosition: "top",
+  }}
+/>
+
+            
           </div>
         </motion.div>
       </div>
