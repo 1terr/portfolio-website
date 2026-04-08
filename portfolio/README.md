@@ -1,4 +1,4 @@
-# Tereraishe Mwanabantu — Portfolio Website
+# Tereraishe Mahupa — Portfolio Website
 
 Personal portfolio website built with **Next.js 14**, **Tailwind CSS**, and **Framer Motion**.  
 Showcasing work done during the industrial attachment at **Lynia Finance** (NUST, 2025–2026).

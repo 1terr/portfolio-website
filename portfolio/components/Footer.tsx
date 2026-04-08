@@ -12,7 +12,7 @@ export default function Footer() {
     >
       <p>
         Built by{" "}
-        <span style={{ color: "var(--teal)" }}>Tereraishe Mwanabantu</span>
+        <span style={{ color: "var(--teal)" }}>Tereraishe Mahupa</span>
         {" · "}Informatics &amp; Analytics · NUST ·{" "}
         <span style={{ color: "var(--teal)" }}>Lynia Finance</span>
       </p>

@@ -81,7 +81,7 @@ export default function Hero() {
           >
             Tereraishe
             <br />
-            <span style={{ color: "var(--teal)" }}>Mwanabantu</span>
+            <span style={{ color: "var(--teal)" }}>Mahupa</span>
           </h1>
 
           {/* Role */}

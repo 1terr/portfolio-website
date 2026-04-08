@@ -45,7 +45,7 @@ export default function Navbar() {
           letterSpacing: "0.05em",
         }}
       >
-        T.Mwanabantu
+        T.Mahupa
         <span style={{ color: "var(--text3)" }}>.dev</span>
       </div>
 
