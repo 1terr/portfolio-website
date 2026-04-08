@@ -28,29 +28,9 @@ export default function Hero() {
         className="grid grid-cols-1 md:grid-cols-2"
         style={{ gap: "3rem", alignItems: "center", width: "100%" }}
       >
-        {/* Photo — shows on mobile above text */}
-        <motion.div
-          className="flex md:hidden justify-center"
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-        >
-          <img
-            src="/avatar.jpg"
-            alt="Tereraishe Mahupa"
-            style={{
-              width: "160px",
-              height: "160px",
-              borderRadius: "50%",
-              border: "2px solid var(--border)",
-              objectFit: "cover",
-              objectPosition: "top",
-            }}
-          />
-        </motion.div>
-
         {/* Left: Text */}
         <motion.div
+          className="hero-text"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, ease: "easeOut" }}
@@ -226,17 +206,17 @@ export default function Hero() {
           </div>
         </motion.div>
 
-        {/* Right: Avatar — desktop only */}
+        {/* Right: Avatar — desktop right, mobile top */}
         <motion.div
-          className="hidden md:flex"
-          style={{ justifyContent: "center", alignItems: "center" }}
+          className="hero-photo"
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
         >
-          <div style={{ position: "relative", width: "280px", height: "280px" }}>
+          <div className="avatar-wrapper">
+            {/* Orbit rings — desktop only via CSS */}
             <div
-              className="spin-slow"
+              className="avatar-orbit-1 spin-slow"
               style={{
                 position: "absolute",
                 inset: "-16px",
@@ -258,7 +238,7 @@ export default function Hero() {
               />
             </div>
             <div
-              className="spin-slow-reverse"
+              className="avatar-orbit-2 spin-slow-reverse"
               style={{
                 position: "absolute",
                 inset: "-32px",
@@ -269,14 +249,7 @@ export default function Hero() {
             <img
               src="/avatar.jpg"
               alt="Tereraishe Mahupa"
-              style={{
-                width: "280px",
-                height: "280px",
-                borderRadius: "50%",
-                border: "2px solid var(--border)",
-                objectFit: "cover",
-                objectPosition: "top",
-              }}
+              className="avatar-img"
             />
           </div>
         </motion.div>

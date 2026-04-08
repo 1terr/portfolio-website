@@ -62,4 +62,28 @@ body {
 ::-webkit-scrollbar { width: 6px; }
 ::-webkit-scrollbar-track { background: var(--bg2); }
 ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
-::-webkit-scrollbar-thumb:hover { background: var(--teal2); }
+::-webkit-scrollbar-thumb:hover { background: var(--teal2); }/* Avatar responsive */
+.avatar-wrapper { position: relative; width: 160px; height: 160px; }
+.avatar-img {
+  width: 160px; height: 160px;
+  border-radius: 50%;
+  border: 2px solid var(--border);
+  object-fit: cover; object-position: top;
+}
+.avatar-orbit-1, .avatar-orbit-2 { display: none; }
+
+@media (min-width: 768px) {
+  .avatar-wrapper { width: 280px; height: 280px; }
+  .avatar-img { width: 280px; height: 280px; }
+  .avatar-orbit-1, .avatar-orbit-2 { display: block; }
+}
+
+/* Hero grid item ordering */
+.hero-photo { order: -1; justify-content: center; display: flex; }
+.hero-text  { order: 0; }
+
+@media (min-width: 768px) {
+  .hero-photo { order: 1; }
+  .hero-text  { order: 0; }
+}
+
