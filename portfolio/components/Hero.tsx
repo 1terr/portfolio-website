@@ -24,10 +24,8 @@ export default function Hero() {
         paddingBottom: "3rem",
       }}
     >
-      <div
-        className="grid grid-cols-1 md:grid-cols-2"
-        style={{ gap: "3rem", alignItems: "center", width: "100%" }}
-      >
+      <div className="hero-grid">
+
         {/* Left: Text */}
         <motion.div
           className="hero-text"
