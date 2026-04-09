@@ -51,13 +51,13 @@ export default function Navbar() {
 
       {/* Desktop Links */}
       <ul
-        style={{
-          display: "flex",
-          gap: "2rem",
-          listStyle: "none",
-        }}
-        className="hidden md:flex"
-      >
+  style={{
+    gap: "2rem",
+    listStyle: "none",
+  }}
+  className="hidden md:flex"
+>
+
         {navLinks.map((link) => (
           <li key={link.href}>
             <a
