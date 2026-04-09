@@ -25,7 +25,6 @@ export default function Hero() {
       }}
     >
       <div className="hero-grid">
-
         {/* Left: Text */}
         <motion.div
           className="hero-text"
@@ -204,51 +203,75 @@ export default function Hero() {
           </div>
         </motion.div>
 
-        {/* Right: Avatar — desktop right, mobile top */}
+        {/* Right: Profile card */}
         <motion.div
           className="hero-photo"
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
         >
-          <div className="avatar-wrapper">
-            {/* Orbit rings — desktop only via CSS */}
-            <div
-              className="avatar-orbit-1 spin-slow"
-              style={{
-                position: "absolute",
-                inset: "-16px",
-                borderRadius: "50%",
-                border: "1.5px solid rgba(79,209,197,0.25)",
-              }}
-            >
+          <div
+            style={{
+              background: "var(--card)",
+              border: "1px solid var(--border)",
+              borderRadius: "20px",
+              padding: "2rem",
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+              textAlign: "center",
+              width: "100%",
+              maxWidth: "300px",
+            }}
+          >
+            <div style={{ position: "relative", marginBottom: "1.25rem" }}>
+              <img
+                src="/avatar.jpg"
+                alt="Tereraishe Mahupa"
+                style={{
+                  width: "160px",
+                  height: "160px",
+                  borderRadius: "50%",
+                  border: "3px solid var(--teal)",
+                  objectFit: "cover",
+                  objectPosition: "top",
+                  display: "block",
+                }}
+              />
               <div
                 style={{
                   position: "absolute",
-                  top: "-4px",
-                  left: "50%",
-                  width: "8px",
-                  height: "8px",
-                  background: "var(--teal)",
+                  inset: "-8px",
                   borderRadius: "50%",
-                  transform: "translateX(-50%)",
+                  border: "1px solid var(--border)",
+                  pointerEvents: "none",
                 }}
               />
             </div>
-            <div
-              className="avatar-orbit-2 spin-slow-reverse"
+
+            <h3
               style={{
-                position: "absolute",
-                inset: "-32px",
-                borderRadius: "50%",
-                border: "1px solid rgba(79,209,197,0.1)",
+                fontFamily: "'Sora', sans-serif",
+                fontSize: "1.15rem",
+                fontWeight: 600,
+                marginBottom: "0.25rem",
               }}
-            />
-            <img
-              src="/avatar.jpg"
-              alt="Tereraishe Mahupa"
-              className="avatar-img"
-            />
+            >
+              Tereraishe Mahupa
+            </h3>
+            <p
+              style={{
+                fontFamily: "'JetBrains Mono', monospace",
+                fontSize: "12px",
+                color: "var(--teal)",
+                marginBottom: "0.25rem",
+              }}
+            >
+              Informatics &amp; Analytics
+            </p>
+            <p style={{ fontSize: "13px", color: "var(--text3)" }}>
+              NUST · Bulawayo, Zimbabwe
+            </p>
           </div>
         </motion.div>
       </div>
