@@ -85,19 +85,20 @@ export default function Navbar() {
 
       {/* Mobile hamburger */}
       <button
-        className="md:hidden"
-        onClick={() => setMenuOpen(!menuOpen)}
-        style={{
-          background: "none",
-          border: "1px solid var(--border)",
-          borderRadius: "6px",
-          color: "var(--teal)",
-          padding: "6px 10px",
-          cursor: "pointer",
-          fontFamily: "'JetBrains Mono', monospace",
-          fontSize: "13px",
-        }}
-      >
+  className="md:hidden"
+  onClick={() => setMenuOpen(!menuOpen)}
+  style={{
+    background: "none",
+    border: "1px solid var(--border)",
+    borderRadius: "8px",
+    color: "var(--teal)",
+    padding: "10px 16px",
+    cursor: "pointer",
+    fontFamily: "'JetBrains Mono', monospace",
+    fontSize: "18px",
+  }}
+>
+
         {menuOpen ? "✕" : "☰"}
       </button>
 
